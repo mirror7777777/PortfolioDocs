@@ -31,3 +31,21 @@ privkey.pem
 letsencrypt
 /etc/letsencrypt/live
 gemini.md
+*.key
+*.pem
+*.csr
+*.p12
+/certs/
+/private/
+.htpasswd
+
+# Secret config
+.env
+.env.*.local
+.env.local
+*.log
+.vite/
+init-letsencrypt.sh
+certbot-auto
+certbot-auto-renew
+eslint.config.js
