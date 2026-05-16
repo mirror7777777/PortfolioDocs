@@ -30,3 +30,11 @@ jobs:
           access_token_lifetime: 600s
       - name: 'Print Token'
         run: gcloud auth print-access-token
+
+      - name: 'Configure Docker'
+        run: |
+          gcloud auth configure-docker northamerica-northeast2-docker.pkg.dev
+      - name: Build and Push Docker Image
+        run: |
+          docker build -t northamerica-northeast2-docker.pkg.dev/githubauth-495804/mywebrepo/image:tag .
+          docker push northamerica-northeast2-docker.pkg.dev/githubauth-495804/mywebrepo/image:tag
