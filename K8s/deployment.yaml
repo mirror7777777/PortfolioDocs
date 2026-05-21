@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Sailor
+  labels:
+    app: my-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: my-app-container
+        image: northamerica-northeast2-docker.pkg.dev/githubauth-495804/mywebrepo/image:f4af2e3cabe2
+        ports:
+        - containerPort: 8080

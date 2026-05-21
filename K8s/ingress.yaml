@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: Sailor-ingress
+  annotations:
+    # Specifies the GKE-native external HTTP(S) Load Balancer
+    kubernetes.io/ingress.class: "gce"
+    # Configures a public, external static IP (Optional: remove line to use an ephemeral public IP)
+    kubernetes.io/ingress.global-static-ip-name: "clusteripaddress"
+    ://google.com: "DualStack"
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: Sailor-service
+            port:
+              number: 80
