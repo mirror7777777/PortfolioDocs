@@ -10,5 +10,5 @@ spec:
     app: my-app
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 3894     # issue matching the 8080 backend port which expose the app to incoming traffic
     protocol: TCP
