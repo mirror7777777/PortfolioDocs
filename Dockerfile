@@ -17,7 +17,6 @@ WORKDIR /usr/src/app
 
 # Copy lockfiles
 COPY package*.json ./
-
 # --- ADD THESE LINES ---
 # Create the node_modules folder as root first
 USER root
@@ -86,7 +85,7 @@ CMD  npm run app
 
 
 # Stage 2: Serve the app with Nginx
-EXPOSE 5173
+EXPOSE 3894
 
 
 

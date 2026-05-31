@@ -14,7 +14,9 @@ services:
     environment:
       NODE_ENV: production
     ports:
-      - 5173:5173
+      - 3894:3894
+    restart: always
+    command: npm run app
   web:
     image: nginx:alpine
     ports:
@@ -25,6 +27,8 @@ services:
       - ./nginx/certbot/www:/var/www/certbot
       - ./nginx/certbot/www/:/var/www/certbot/:ro
     restart: always
+    depends_on:
+      - server
  
   certbot:
     image: certbot/certbot
