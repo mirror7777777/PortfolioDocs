@@ -30,15 +30,15 @@ export default function Form() {
   return (
     <>
 
-      <div className='Formcontainer'>
-        <div className='text-5xl  border-4 pointer w-130 h-50 p-20 ml-30 mt-10 mb-10 text-shadow-indigo-500 hfont'>
-          <h2 className='text-white'>Contact form</h2>
+      <div className='relative Formcontainer'>
+        <div className='text-2xl  border-4 pointer w-70 h-20 p-12 ml-40  mt-4 mb-13 text-shadow-indigo-500 hfont'>
+          <h2 className='text-black contactfont'>Contact form</h2>
         </div>
         <form className='form'>
           <label>
             <p>First name:</p>
             <input
-             className='input1'
+             className='input1 mb-5'
               placeholder='Enter Firstname'
               value={form.firstName}
               onChange={e => {
@@ -46,13 +46,13 @@ export default function Form() {
                   ...form,
                   firstName: e.target.value
                 });
-              }}
+              }} 
             />
           </label>
           <label>
             <p>Last name: </p>
             <input
-             className='input1'
+             className='input1 mb-5'
               placeholder='Enter Lastname'
               value={form.lastName}
               onChange={e => {
@@ -66,7 +66,7 @@ export default function Form() {
           <label>
             <p>Email:</p>
             <input
-            className='input1'
+            className='input1 mb-5'
               placeholder='Enter Email'
               value={form.email}
               onChange={e => {
@@ -77,8 +77,8 @@ export default function Form() {
               }}
             />
           </label>
-        </form>
-        <div>
+
+             <div className='mt-7'>
           <label className='messageSect'>
             <textarea name="Message" id="" className=' input2'   value={form.message}
               onChange={e => {
@@ -92,9 +92,11 @@ export default function Form() {
           </label>
         </div>
 
-        <div className='text-3xl pointer FORMbutton'>
+        <div className='pointer FORMbutton'>
           <button type='button' className='Button' onClick={getdata}>Submit</button>
         </div>
+        </form>
+     
       </div>
 
 

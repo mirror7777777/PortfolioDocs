@@ -1,7 +1,5 @@
 import { memo } from 'react';
-import Footerimg from '../../public/images/Footer1.jpg'
-// import Footer2 from '../../public/images/Footer2.jpg'
-// import Footer3 from '../../public/images/Footer3.jpg'
+import Footerimg from '../assets/images/pattern.jpg';
 import { useState, useEffect } from 'react';
 import Form from './form';
 
@@ -51,40 +49,36 @@ const Footer = () => {
 
 
     return (
-        <div className='footer-M relative  '>
+        <div className='relative h-170 '>
 
-            <div className='footer opacity-3 ' />
+            <div className=' ' /> 
 
-            <div className='Footer-background'>
+            <div className=''>
 
-                <div className='footerIMG'>
-
+                <div className='footerIMG opacity-10'>
                     <img src={Footerimg} alt="footerImage" />
 
                 </div>
-                <div>
-                    <h1>Ready to grow your business? We'll be there for you every step of the way. Contact us today and take a bold step.</h1>
+                <div className='absolut ml-150 text-black text-3xl font-bold z-50 footer-text '>
+                    <h1>Contact us today.</h1>
                 </div>
 
                 {/* left and right containers */}
 
-                <div className='footeR'>
+                <div className='testfo'>
                         {/* left container */}
                     <div className='absolute top-3.5 left-3.5 footer-containers'>
 
 
 
 
-                        <div className='absolute top-90 left-40   w-1/4 h-186  z-15  text-5xl font-bold text-black opacity-27  '>
+                        <div className=' w-1/4 h-186  z-15  text-5xl font-bold text-black opacity-27  '>
 
-                            <section className='footer-Left'>
+                            <section className='footer-Left mt-40 ml-20'>
 
                                 <div className=''>
-                                </div>
 
-                            </section>
-
-                            <ul className='ulheadersect cursor-pointer' id='ulheadersect'>
+                            <ul className='flex flex-col gap-7' id='ulheadersect'>
 
                                 <li><a onClick={Clientlogic} >ABOUT</a></li>
                                 <li><a onClick={Servicelogic}>WORK</a></li>
@@ -94,6 +88,10 @@ const Footer = () => {
                                 <li><a href="">PRIVACY POLICY</a></li>
 
                             </ul>
+                                </div>
+
+                            </section>
+
 
                         </div>
 
@@ -106,11 +104,11 @@ const Footer = () => {
 
                     {/* right container */}
 
-                    <div className='absolute top-70 left-20 footer-container '>
+                   <div className='absolute top--20 left-20 footer-container '>
 
-                        <section className='footer-Right'>
+                        <section className='footer-Right ml-170 mt-157'>
 
-                            <div>
+                            <div className=' absolute top-158 left-170'>
 
                                 {/* imported form component */}
                                 <Form />
@@ -130,4 +128,4 @@ const Footer = () => {
     );
 };
 
-export default memo(Footer);
+export default Footer;

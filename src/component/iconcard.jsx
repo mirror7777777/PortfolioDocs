@@ -11,7 +11,6 @@ import { devopstools } from '../assets/data/svgObj.js';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, Stage,  } from '@react-three/drei';
 import { Suspense } from 'react';
-import Bot from '../../public/images/RobotB.jpg'
 
 const Iconcard = () => {
   const [rendered, setrendered] = useState(false);
@@ -91,14 +90,14 @@ const Iconcard = () => {
   return (
     <div className='icon-div'>
 
-      <section className='TextInfosect'>
-        <div className='textDiv absolute top-30 left-8 text-4xl mb-50'>
+      <section className='TextInfosect bg-transparent relative h-430 w-full'>
+        <div className='textDiv absolute top-30 left-8 text-4xl mb-10'>
           <p >  Dealing with data and its state is critical to keeping a website's application lifecycle running smoothly and minimizing mistakes that may arise as a result of incorrect data and state management. Here are the tools I use to ensure that your data is handled properly.</p>
         </div>
         <div className='textDiv absolute top-200 left-8 text-4xl'>
           <p>Designing a webpage to match the modern aesthetic view of a new-age website requires a significant amount of effort, tools, and foundation. I've learned how to use frontend design frameworks like React and Tailwind, as well as 3D environment construction tools like Blender and Three. JS, GSAP, and Figma for 2D animation and prototyping, among other things. This enables a wonderful user experience and the incorporation of affordances and signifier elements to enhance branding.</p>
         </div>
-        <div className='textDiv absolute top-350 left-8 text-4xl'>
+        <div className='textDiv absolute top-350 left-8 text-4xl mb-50'>
           <p>The foundational programming languages I use to create a completely functional website are HTML, CSS, and JavaScript. HTML is used to construct the website's structural elements, CSS is used to design it, and JavaScript is used to add functionality.</p>
         </div>
 
@@ -106,13 +105,13 @@ const Iconcard = () => {
 
 
       <div className='botimg'>
-        <img src={Bot} 
+        {/* <img  
           alt='glass'
           className=' w-full h-500 object-cover brightness-50 opacity-9 z-70 mr-180 '
-         />
+         /> */}
       </div>
       <div className='iconSpans'>
-        <div ref={inforef} className="icon-container  ">
+        <div ref={inforef} className="icon-container ">
           {rendered && icons.map((icon, index) => {
             const row = Math.floor(index / cols);
             const column = Math.floor(index % cols);

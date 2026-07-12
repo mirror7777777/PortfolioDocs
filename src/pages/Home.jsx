@@ -12,9 +12,10 @@ import Footer from '../component/footer'
 
 
 
+
 export default function Home() {
   return (
-    <div className=''>
+    <div className='overflow-hidden'>
       <Header/>
       <ThemeToggle />
       <Hero/>

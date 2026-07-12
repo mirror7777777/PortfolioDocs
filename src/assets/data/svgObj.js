@@ -32,7 +32,7 @@ export const Servicestools = [
         { text: 'Three.js' },
         { text: 'Photoshop' },
         { text: 'Bootstrap' },
-         { text: 'Ejs' },
+        { text: 'Ejs' },
     ];
 
     export const Programmingtools = [
@@ -46,8 +46,8 @@ export const Servicestools = [
         { text: 'Neon' },
         { text: 'pgAdmin' },
         { text: 'postgresql' },
-        { text: 'MongoDB' },
-        { text: 'Neon' },
-        { text: 'pgAdmin' },
+        // { text: 'MongoDB' },
+        // { text: 'Neon' },
+        // { text: 'pgAdmin' },
     ];
     

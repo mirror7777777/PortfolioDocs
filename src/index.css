@@ -93,13 +93,14 @@
 *{
 padding: 0;
 margin: 0;
- 
+box-sizing: border-box;
 }
-body{
+
+html body{
   max-width: 100%;
   width: 100%;
   overflow:scroll;
-  height: 200vh;
+  height: 100%;
   position: relative;
 }
 
@@ -272,7 +273,7 @@ body{
 }
 
 .workrightimg img{
- height:500px;
+ height:100px;
   width:1000px;
 
   @media (max-width: 400px){
@@ -282,7 +283,7 @@ body{
   }
 }
 .workleftimg img{
-  height: 500px;
+  height: 300px;
   width:1000px;
 
   
@@ -532,10 +533,6 @@ img:hover {
     
   }
 }
-.textDiv {
-  margin:50px;
-
-}
 
 
 .textDiv p{
@@ -556,102 +553,17 @@ img:hover {
 
 }
 
-.TextInfosect{
-
-}
-.footeR div{
-  display: flex;
-  flex-direction: row;
-  gap: 1400px;
-  
-
-
-}
-.footer{
-  /* border: 5px solid red;
-  height: 500px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1000px;
-  background-color: silver;
-background-image: linear-gradient(335deg, #b00 23px, transparent 23px),
-linear-gradient(155deg, #d00 23px, transparent 23px),
-linear-gradient(335deg, #b00 23px, transparent 23px),
-linear-gradient(155deg, #d00 23px, transparent 23px);
-background-size: 58px 58px;
-background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px; */
-
-
-}
-.footer-containers{
- /* width: 2500px;
- height: 480px; */
- 
-}
-
-
-.footer-containers h1{
-  /* font-family: Inter ;
-  font-size: 50px;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: normal;
-  color:black; */
-
-  @media (max-width: 400px){
-    font-size: 16px;
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 370px;
-    
-  }
-}
-
-.footer-container{
- /* display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: center;
- gap: 400px; */
-}
-
-.footer-Left{
-  /* border: 10px solid brown;
-  height: 680px;
-  width: 1000px;
-  background-color: rgba(255, 0, 0, 0.3);
-  background-image: linear-gradient(335deg, #b00 23px, transparent 23px), */
-}
-
-.footer-Right{
-  /* border: 10px solid blue;
-  height: 680px;
-  width: 1000px;
-  background-color: rgba(0, 0, 255, 0.5); */
-}
-.footerIMG{
-  /* height: 10vh; */
-  @media (max-width: 400px) {
-    z-index: 2;
-    height: 1vh;
-    width: 400px;
-    
-  }
-  
-}
 .messageSect{
   position: absolute;
-  top: 200px;
-  left: 330px;
+  left:250px;
+  top: 190px;
+
 }
 .messageSect p{
   position: absolute;
   top: 10px;
   left: 10px;
-  font-size: x-large;
+  font-size: 6px;
   color: black;
   font-weight: bold;
 
@@ -663,27 +575,28 @@ background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px; */
 .input1{
   border: 8px solid black;
   border-color: gainsboro;
-  padding: 20px;
-  width: 300px;
-  height: 60px;
+  padding: 18px;
+  width: 200px;
+  height: 40px;
   border-radius: 5px;
   background-color: white;
   border-style: groove double;
   border-radius: 8px;
   background-color: lightcyan;
-  font-size: x-large;
+  font-size: 10px;
+
 }
 .input2{
   border: 10px solid black;
   border-color: gainsboro;
   padding: 0px;
-  width: 614px;
-  height: 374px;
+  width: 349px;
+  height: 250px;
   background-color: white;
   border-style: groove double;
   border-radius: 8px;
   background-color: lightcyan;
-  font-size: x-large;
+  font-size: 10px;
 
 }
 label{
@@ -694,15 +607,16 @@ label{
 
 
 .FORMbutton{
-  /* border: 4px solid black;
-  width: 130px;
-  height: 42px;
+  border: 4px solid black;
+  width: 60px;
+  height: 32px;
   border-radius: 5px;
   background-color: white;
   padding: 3px;
   position: absolute;
-  left: 817px;
-  top: 591px; */
+  left: 417px;
+  top: 399px;
+  font-size: 10px;
 }
  .Button{
   padding: 4px;
@@ -710,29 +624,21 @@ label{
   border: 3px solid black;
   border-radius: 5px;
   position: absolute;
-  left: 4px;
   top: 2px;
-  width: 100px;
+  width: 50px;
   height: 30px;
   cursor: pointer;
+  font-size: 10px;
 } 
-.Footer-background{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1000px;
 
-}
-.footerIMG img{
-  /* max-width: 100%;
-  width: 2550px;
-  height: 100vh; */
-  width: 10px;
-  
-}
+
 .form p{
-  font-size: 28px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.contactfont{
+  font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 
@@ -741,7 +647,7 @@ label{
   top:120%;
   left:5%;
   width: 1000px;
-  height:1000px;
+  height:1000px;  
   position: absolute;
   box-sizing: border-box;
   overflow: hidden;
@@ -762,41 +668,6 @@ label{
   }
 }
 
-.contact-us{
-  top: 1px;
-  border: 4px solid black;
-  padding: 20px;
-  width: 550px;
-  height: 540px;
-  background-color: rgba(154, 205, 50, 0.5);
-  border-radius: 20px;
-  align-self: center;
-
-}
-.Formcontainer{
-  border: 7px solid black;
-  width: 600px;
-  height: 600px;
-  border-radius: 10px;
-  background-color: transparent;
-  gap: 20px;
-  margin-bottom: 50px;
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  z-index: 1;
-
-}
-form{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.form p{
-  font-size: 30px;
-  font-weight: 900;
-  color: white;
-}
 
 
 @keyframes ickey {
@@ -1019,21 +890,22 @@ form{
   }
 }
 
-/* .htext {
-  display: flex;
+.htext {
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-bottom: 300px;
   height: 120px;
   float: left;
-  margin-left: 50px;
-}
+  margin-left: 50px; */
+} 
 
 .htext h1{
   font-size: large;
   font-weight: bold;
-  font-size: 30px; 
+  font-size: 6px; 
+  color: black;
   
    @media (min-width: 400px){
     font-size: 10px;
@@ -1100,18 +972,23 @@ form{
     
   }
 }
+.ulheadersect{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .ulheadersect li a{
   text-decoration: none;
   color: black;
   font-weight: bold;
-  font-size: 65px;
+  font-size: 20px;
   margin-left: 20px;
   font-family: sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 30px;
   border: 4px solid black;
   border-radius: 10px;
   background-color: rgb(231, 253, 253);
-  gap: 10px;
+  gap: 30px;
   color: black;
   width: fit-content;
   height: 1.8em;
@@ -1144,52 +1021,15 @@ background-color: #e5e5f7;
     left: 50px;
     display: flex;
     flex-direction: column;
-    /* background-color: #e5e5f7;
+    background-color: #e5e5f7;
     border-radius: 10px;
     border: 4px solid black;
-    padding: 20px; */
+    padding: 20px;
 
   }
 }
 
-.cardBackground {
-  position: absolute;
-  top: 63%;
-  left: 50px;
-  z-index: -1;
-  width: 96%;
-  height: 350px;
-  overflow: hidden;
-  background-position: center;
-  opacity: 9;
 
-  --s: 84px; /* control the size*/
-  --c1: #f2f2f2;
-  --c2: #cdcbcc;
-  --c3: #999999;
-  
-  --_g: 0 120deg,#0000 0;
-  background:
-    conic-gradient(             at calc(250%/3) calc(100%/3),var(--c3) var(--_g)),
-    conic-gradient(from -120deg at calc( 50%/3) calc(100%/3),var(--c2) var(--_g)),
-    conic-gradient(from  120deg at calc(100%/3) calc(250%/3),var(--c1) var(--_g)),
-    conic-gradient(from  120deg at calc(200%/3) calc(250%/3),var(--c1) var(--_g)),
-    conic-gradient(from -180deg at calc(100%/3) 50%,var(--c2)  60deg,var(--c1) var(--_g)),
-    conic-gradient(from   60deg at calc(200%/3) 50%,var(--c1)  60deg,var(--c3) var(--_g)),
-    conic-gradient(from  -60deg at 50% calc(100%/3),var(--c1) 120deg,var(--c2) 0 240deg,var(--c3) 0);
-  background-size: calc(var(--s)*sqrt(3)) var(--s);
-  background-position: center;
-  @media (max-width: 400px){
-    width: 300px;
-    height: 800px;
-    position: absolute;
-    top: 700px;
-    left: 50px;
-    display: flex;
-    flex-direction: column;
-
-  }
-}
 
 .displaysect{
 
@@ -1204,8 +1044,8 @@ background-color: #e5e5f7;
       position: relative;
       margin-top: 400px;
 
-      /* position: absolute;
-      left: -120px; */
+      position: absolute;
+      left: -120px;
 
     
    
@@ -1296,4 +1136,100 @@ background-color: #e5e5f7;
     right: 760px;
     font-size: 15px;
   }
+}
+.testfo{
+  display: flex;
+  flex-direction: row;
+  gap: 400px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.footer-containers{
+ width: 2500px;
+ height: 480px;
+ 
+}
+
+
+
+
+.footer-containers h1{
+  font-family: Inter ;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: normal;
+  color:black;
+
+  @media (max-width: 400px){
+    font-size: 16px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 370px;
+    
+  }
+}
+
+.footer-container{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: center;
+ gap: 400px;
+}
+
+.footer-Left{
+  border: 10px solid brown;
+  height: 500px;
+  width: 600px;
+  background-color: rgba(255, 0, 0, 0.3);
+  background-image: linear-gradient(335deg, #b00 23px, transparent 23px);
+  border-radius: 20px;
+  
+}
+
+.footer-Right{
+  border: 10px solid blue;
+  height: 500px;
+  width: 600px;
+  background-color: rgba(0, 0, 255, 0.5);
+  border-radius: 20px;
+}
+.footerIMG{
+  height: 10vh;
+  @media (max-width: 400px) {
+    z-index: 2;
+    height: 1vh;
+    width: 400px;
+    
+  }
+  
+}
+.FORMbutton{
+  border: 4px solid black;
+  width: 100px;
+  height: 42px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 3px;
+  position: absolute;
+  left: 500px;
+  top: 440px;
+}
+.Formcontainer{
+  border: 7px solid black;
+  width: 600px;
+  height: 490px;
+  border-radius: 10px;
+  background-color: transparent;
+  gap: 20px;
+  margin-bottom: 50px;
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  z-index: 1;
+
 }

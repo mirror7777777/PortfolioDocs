@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import { memo } from 'react';
-import brand from '../../public/images/brandweb.png';
-import wine from '../../public/images/wine.png';
-import gArrow from '../../public/images/g-Arrow.png';
-import cArrow from '../../public/images/c-Arrow.png';
-import wArrow from '../../public/images/w-Arrow.png';
-import bArrow from '../../public/images/b-Arrow.png';
+import brand from '../../src/assets/images/flames.jpg';
+import wine from '../../src/assets/images/wineweb.png';
+import gArrow from '../../src/assets/images/wineweb.png';
+import cArrow from '../../src/assets/svg/screen-svgrepo-com.svg';
+
 
 
 const Work = () => {
   return (
     <div>
       <div className='flex flex-col  md:flex-col gap-30 displaysect'>
-      <section className="work-section-left section work-section- flex flex-col" >
-        {/* Your work left section content */}
+      {/* <section className="work-section-left section work-section- flex flex-col" >
+      
         <div className='wrapper flex flex-row gap-20'>
         <div className='img box a  visual workrightimg mt-15 card'>
           <div className='example-3 inner'>
@@ -36,19 +35,20 @@ const Work = () => {
        </div>
         </div>
        
-      </section>
+      </section> */}
 
-      <section className="work-section-right section work-section flex flex-col">
+      <section className="work-Background-section flex flex-col mb-50 relative" >
         {/* Your work right section content */} 
-        <div  className='wrapper flex flex-row gap-20'>
-            <div  className='img box a  visual workleftimg  mt-15 card' > 
-              <div className='example-3 inner'>
+        <div  className='flex flex-row gap-20 '>
+            <div  className='workleftimg-frame  mt-15 card mt-50' > 
+              <div className='example-3 inner mt-60 '>
                  <img className='imgs' src={wine} alt="Wine" />
               </div>
              
             </div>
+            
         <div className='content'>
-             <div className=' Right-content-sect meta mt-110 gap-20'>
+             <div className=' Right-content-sect meta mt-90 gap-20'>
             <h3> Your Private wine Cellar, Digitally Perfected</h3>
             <p className='desc'>The ultimate digital liquor cabinet. We’ve stripped away the noise to provide a clean, Tailwind-styled interface that focuses on what matters: premium quality and effortless ordering. Your favorite labels are just a tap away.  Click below to learn more. <a href=""><img src={cArrow} alt="" /></a></p>
        </div>
@@ -59,7 +59,6 @@ const Work = () => {
        </a>
         </div>
         </div>
-      
       
       </section>
       </div>
