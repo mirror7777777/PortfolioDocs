@@ -49,3 +49,4 @@ init-letsencrypt.sh
 certbot-auto
 certbot-auto-renew
 eslint.config.js
+google-cloud-sdk
