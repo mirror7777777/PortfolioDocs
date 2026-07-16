@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "app": "vite",
+    "dev": "vite",
     "clean": "rm -rf dist",
     "build": "vite build",
     "lint": "eslint .",
@@ -20,8 +20,6 @@
     "@react-three/postprocessing": "^3.0.4",
     "@react-three/xr": "^6.6.28",
     "@saitonakamura/react-three-xr": "^5.1.5",
-    "@tailwindcss/vite": "^4.1.16",
-    "@vitejs/plugin-react": "^5.2.0",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",
@@ -40,8 +38,7 @@
     "react-visibility-sensor": "^5.1.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.16",
-    "three": "^0.181.1",
-    "vite-plugin-svgr": "^4.5.0"
+    "three": "^0.181.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
@@ -51,7 +48,6 @@
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",
-    "globals": "^16.4.0",
-    "vite": "^8.0.16"
+    "globals": "^16.4.0"
   }
 }
