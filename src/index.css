@@ -1,5 +1,7 @@
-@custom-variant dark (&:where(.dark, .dark *));
 @import "tailwindcss";
+@import "tailwindcss";
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 
 @theme {
@@ -105,11 +107,11 @@ html body{
     .darkmode{
     background-color: var(--color-darkmode);
   }
-  /* .light{
+  .light{
     background-color: var(--color-background);
-  } */
+  }
   .toogle-button{
-    @apply border-cyan-300 border-4 w-15 h-10 rounded-full flex  p-1 cursor-pointer absolute right-0 top-0 items-center  md:top-4 top-0.5 bg-gradient-to-r from-cyan-500 to-blue-500  transition-all duration-300 ease-in-out;
+    @apply border-cyan-300 border-4 w-15 h-10 rounded-full flex  p-1 cursor-pointer absolute right-0 top-0 items-center  top-0.5 bg-gradient-to-r from-cyan-500 to-blue-500  transition-all duration-300 ease-in-out;
  
   }
   .star{
@@ -741,7 +743,7 @@ label{
 
 
 @utility card-hover{
-  @apply transition-transform duration-300 ease-in-out;
+  @apply transition-transform duration-300 ;
 
 
 }
