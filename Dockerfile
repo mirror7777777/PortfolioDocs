@@ -8,28 +8,23 @@
 
 # --- STAGE 1: Final Build Image ---
 
-ARG NODE_VERSION=26.5.0
-FROM node:${NODE_VERSION}-alpine as frontendbuilder
+FROM node:26-alpine as frontendbuilder
 
 # Set working directory for all build stages.
-WORKDIR /app
+WORKDIR /usr/src/app
 
 # Copy lockfiles
 COPY package*.json ./
-RUN npm ci
-COPY . .
-RUN npm run build
+RUN npm ci --include=dev
+COPY . dist
 
 # --- STAGE 2: Final Production Image ---
-FROM node:${NODE_VERSION}-alpine as frontendrunner
-WORKDIR /app
+FROM node:26-alpine as frontendrunner
+WORKDIR /usr/src/app
 # Copy the built frontend assets and backend server into the final image
-COPY --from=frontendbuilder /app/package*.json ./
-COPY --from=frontendbuilder /app/dist ./
-RUN npm ci
+COPY --from=frontendbuilder /usr/src/app/package*.json ./
+COPY --from=frontendbuilder /usr/src/app/dist ./dist
+RUN npm ci --include=dev
 
 EXPOSE 5174
-CMD ["npm", "run", "app"]
-
-
-
+CMD ["npm", "run", "dev"]
