@@ -22,7 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-vite.config.js
 certbot/conf
 certbot/work/
 certbot/www/
