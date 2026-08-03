@@ -1,30 +1,21 @@
-# syntax=docker/dockerfile:1
-
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Dockerfile reference guide at
-# https://docs.docker.com/go/dockerfile-reference/
-
-# Want to help us make this template better? Share your feedback here: https://forms.gle/ybq9Krt8jtBL3iCk7
-
-# --- STAGE 1: Final Build Image ---
-
-FROM node:26-alpine as frontendbuilder
+################################################################################
+# Use node image for base image for all stages.
+FROM node:20.19.0-alpine AS base
 
 # Set working directory for all build stages.
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy lockfiles
 COPY package*.json ./
-RUN npm ci --include=dev
-COPY . dist
+RUN npm install
+COPY . .
+RUN npm run build
+# Stage 2: Serve the app with Nginx
 
-# --- STAGE 2: Final Production Image ---
-FROM node:26-alpine as frontendrunner
-WORKDIR /usr/src/app
-# Copy the built frontend assets and backend server into the final image
-COPY --from=frontendbuilder /usr/src/app/package*.json ./
-COPY --from=frontendbuilder /usr/src/app/dist ./dist
-RUN npm ci --include=dev
-
-EXPOSE 5174
-CMD ["npm", "run", "dev"]
+FROM nginx:alpine
+COPY ./nginx/conf.d/nginx.conf /etc/nginx/conf.d/nginx.conf
+# Copy the build output from the first stage to Nginx
+COPY --from=base /app/dist/ /usr/share/nginx/html/
+CMD nginx -g "daemon off;"
+# EXPOSE the internal port NPM will look for
+EXPOSE 80
