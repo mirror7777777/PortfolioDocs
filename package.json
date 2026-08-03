@@ -1,19 +1,8 @@
 {
   "name": "portfoliodocs",
-  "version": "1.0.0",
-  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
-  "homepage": "https://github.com/mirror7777777/PortfolioDocs#readme",
-  "bugs": {
-    "url": "https://github.com/mirror7777777/PortfolioDocs/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mirror7777777/PortfolioDocs.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "vite.config.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "app": "vite",
     "clean": "rm -rf dist",
