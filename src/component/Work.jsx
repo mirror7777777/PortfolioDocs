@@ -37,10 +37,10 @@ const Work = () => {
        
       </section> */}
 
-      <section className="work-Background-section flex flex-col mb-50 relative" >
+      <section className="work-Background-section flex flex-col absolute top-220" >
         {/* Your work right section content */} 
-        <div  className='flex flex-row gap-20 '>
-            <div  className='workleftimg-frame  mt-15 card mt-50' > 
+        <div  className='flex flex-row gap-10 '>
+            <div  className='workleftimg-frame card ' > 
               <div className='example-3 inner mt-60 '>
                  <img className='imgs' src={wine} alt="Wine" />
               </div>
@@ -48,15 +48,23 @@ const Work = () => {
             </div>
             
         <div className='content'>
-             <div className=' Right-content-sect meta mt-90 gap-20'>
+             <div className=' Right-content-sect meta mt-90 gap-10'>
             <h3> Your Private wine Cellar, Digitally Perfected</h3>
-            <p className='desc'>The ultimate digital liquor cabinet. We’ve stripped away the noise to provide a clean, Tailwind-styled interface that focuses on what matters: premium quality and effortless ordering. Your favorite labels are just a tap away.  Click below to learn more. <a href=""><img src={cArrow} alt="" /></a></p>
-       </div>
-       <a href="">
-        <svg>
+            <p className='desc'>The ultimate digital liquor cabinet. We’ve stripped away the noise to provide a clean, Tailwind-styled interface that focuses on what matters: premium quality and effortless ordering. Your favorite labels are just a tap away.  Click below to learn more.</p>
+             <div className="navbar">
+             <div className="htext">
+                <div className='absolute top-40 left-190  w-1/4 h-86  z-5  text-1xl font-bold text-black opacity-27  navigationbar '>
+                    <ul className='ulheadersects cursor-pointer' id='' >
+                        <li><a href="">Click To View Website1</a></li>
+                        <li><a href="">Click To View Website2</a></li>
+                        <li><a href="">Click To View Website3</a></li>
+                    </ul>
 
-        </svg>
-       </a>
+                </div>
+                
+             </div>
+            </div>
+       </div>
         </div>
         </div>
       

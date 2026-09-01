@@ -7,11 +7,11 @@ import Prototyping from '../svg/screen-svgrepo-com.svg?url';
 
  
 export const Herotext = [
-        { text: 'Responsive Design', svgImag: {Responsive} },
-        { text: 'UI/UX Design',svgImage: {UIUX} },
+        { text: 'UI/UX Designs',svgImage: {UIUX} },
         { text: 'Typography', svgImage: {Typography} },
         { text: 'Accessibility', svgImage: {Accessibility} },
         { text: 'Prototyping',svgImage: {Prototyping} },
+        { text: 'Responsive Design', svgImag: {Responsive} },
     ];
 
 
@@ -26,18 +26,23 @@ export const Herotext = [
 
     
 export const Servicestools = [
+        { text: 'Three.js' },
+        { text: 'Bootstrap' },
+        { text: 'Ejs' },
         { text: 'Figma' },
         { text: 'React' },
         { text: 'Tailwind' },
         { text: 'Three.js' },
-        { text: 'Photoshop' },
         { text: 'Bootstrap' },
         { text: 'Ejs' },
+        {text: 'Gsap'}
+        
     ];
 
     export const Programmingtools = [
-        { text: 'HTML' },
-        { text: 'CSS' },
+        { text: 'HTMLs' },
+        { text: 'Html' },
+        { text: 'Css' },
         { text: 'JavaScript' },
     ];
 
@@ -46,8 +51,8 @@ export const Servicestools = [
         { text: 'Neon' },
         { text: 'pgAdmin' },
         { text: 'postgresql' },
-        // { text: 'MongoDB' },
-        // { text: 'Neon' },
-        // { text: 'pgAdmin' },
+        { text: 'MongoDB' },
+        { text: 'Neon' },
+        { text: 'pgAdmin' },
     ];
     

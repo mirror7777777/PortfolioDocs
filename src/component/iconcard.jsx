@@ -5,12 +5,13 @@ import classNames from 'classnames';
 import { Servicestools } from '../assets/data/svgObj.js';
 import { Programmingtools } from '../assets/data/svgObj.js';
 import { devopstools } from '../assets/data/svgObj.js';
-// import {Server} from '../../public/Server_racking_system.jsx';
-// import {Infinity} from '../../public/Infinity_loop.jsx';
-// import {Laptop} from '../../public/Laptop.jsx';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, Stage,  } from '@react-three/drei';
-import { Suspense } from 'react';
+// import { Canvas } from '@react-three/fiber';
+// import { OrbitControls, Preload, Stage,  } from '@react-three/drei';
+// import { Suspense } from 'react';
+// import {Robots} from '../../public/Robot.jsx'
+// import {Scanner} from '../../public/Scanner.jsx'
+// import {Keys} from '../../public/Keys.jsx'
+// import { Designs } from '../../public/Design.jsx';
 
 const Iconcard = () => {
   const [rendered, setrendered] = useState(false);
@@ -91,14 +92,14 @@ const Iconcard = () => {
     <div className='icon-div'>
 
       <section className='TextInfosect bg-transparent relative h-430 w-full'>
-        <div className='textDiv absolute top-30 left-8 text-4xl mb-10'>
-          <p >  Dealing with data and its state is critical to keeping a website's application lifecycle running smoothly and minimizing mistakes that may arise as a result of incorrect data and state management. Here are the tools I use to ensure that your data is handled properly.</p>
+        <div className='textDiv absolute top-30 left-8 mb-10'>
+          <p > Dealing with managing, manipulating and storing both personal and company data from day-to-day activities can be very stressful, especially when incorporating data security and integrity, which are crucial to an organization's success. Spanned to the right are the tools I use to ensure your data is handled properly.</p>
         </div>
-        <div className='textDiv absolute top-200 left-8 text-4xl'>
-          <p>Designing a webpage to match the modern aesthetic view of a new-age website requires a significant amount of effort, tools, and foundation. I've learned how to use frontend design frameworks like React and Tailwind, as well as 3D environment construction tools like Blender and Three. JS, GSAP, and Figma for 2D animation and prototyping, among other things. This enables a wonderful user experience and the incorporation of affordances and signifier elements to enhance branding.</p>
+        <div className='textDiv absolute top-200 left-8 mb-10 '>
+          <p>Equipped with creative design tools to prototype and create frontend webpage. Framework Tools like React, Tailwind as well as 3D environment construction tools like Blender and Three. JS. I Also make use of GSAP and Figma for 2D animation and prototyping. Among other things, this enables creation of a wonderful user experience and the incorporation of affordances and signifier elements to enhance branding.</p>
         </div>
-        <div className='textDiv absolute top-350 left-8 text-4xl mb-50'>
-          <p>The foundational programming languages I use to create a completely functional website are HTML, CSS, and JavaScript. HTML is used to construct the website's structural elements, CSS is used to design it, and JavaScript is used to add functionality.</p>
+        <div className='textDiv absolute top-350 left-8  mb-50'>
+          <p>To provide your website with a strong code reasoning and functional structutre, Foundational programming languages HTML CSS, and JavaScript are used to construct the website's structural elements. HTML to build the website boilerplate and blueprint, CSS is used to design it, JavaScript to add functionality.</p>
         </div>
 
       </section>
@@ -148,34 +149,34 @@ const Iconcard = () => {
       </div>
 
       <div>
-        <div className='Iconcontainer'>
+        <div className=''>
           <div className='justify-center items-center  techmodel'>
             <div className='text-red-600 text-3xl z-50 font-bold absolute top-30 left-250'>
               <div className='container'>
-                <div className=' responsivetext'>
-                  <Canvas camera={{ position: [1, 1, 50], fov: 120 }}>
+                {/* <div className=' responsivetext absolute top-23 right-135'>
+                  <Canvas camera={{ position: [1, 100, 50], fov: 10 }}>
 
                     <Suspense>
                       <ambientLight intensity={0.3} />
-                      <directionalLight color={'red'} intensity={2} castShadow position={[2.5, 8, 5]} shadow-mapSize={[1024, 1024]} >
+                      <directionalLight color={'red'} intensity={8} castShadow position={[2.5, 8, 5]} shadow-mapSize={[1024, 1024]} >
                         <orthographicCamera attach="shadow-camera" args={[-10, 10, 10, -10]} />
                       </directionalLight>
                       <Stage environment="city" intensity={0.6} >
-                        {/* <Server /> */}
+                        <Scanner />
                       </Stage>
                       <OrbitControls />
                       <Preload all />
                     </Suspense>
                   </Canvas>
-                </div>
+                </div> */}
                 <h1>Backend tools</h1>
-                <div className=' text-4xl font-bold  z-50  m-5 animate  '>
-                  <span className='flex-center gap-10 spantext mt-27'>
+                <div className=' text-2xl font-bold  z-50  m-5 animate1  '>
+                  <span className='flex-center gap-10 spantext1 mt-27'>
                     <div >
                       {devopstools.map((Htext) => (
                         <div key={Htext.text}>
                   
-                          <span className=' flex flex-col mt-5 mintext text-blue-600'>{Htext.text}</span>
+                          <span className=' flex flex-col mt-5 mintext text-white'>{Htext.text}</span>
                         </div>
                       ))}
                     </div>
@@ -188,9 +189,9 @@ const Iconcard = () => {
 
         <div>
           <div className='justify-center items-center techmodel1  '>
-            <div className='text-red-600 text-3xl z-50 font-bold absolute top-100 left-250'>
+            <div className='text-red-600 text-3xl z-50 font-bold absolute top-150 left-250'>
               <div className='container'>
-                <div className=' responsivetext'>
+                {/* <div className=' responsivetext absolute top-10 right-128 '>
                   <Canvas camera={{ position: [1, 5, 50], fov: 50 }}>
 
                     <Suspense >
@@ -199,7 +200,7 @@ const Iconcard = () => {
                         <orthographicCamera attach="shadow-camera" args={[-10, 10, 10, -10]} />
                       </directionalLight>
                       <Stage environment="city" intensity={0.6} >
-                        {/* <Infinity /> */}
+                        <Robots/>
                       </Stage>
                       <OrbitControls />
                       <Preload all />
@@ -207,10 +208,10 @@ const Iconcard = () => {
 
 
                   </Canvas>
-                </div>
+                </div> */}
                 <h1>Frontend tools</h1>
-                <div className=' text-4xl font-bold  z-50  m-5 animate  '>
-                  <span className='flex-center gap-10 spantext mt-27'>
+                <div className=' text-2xl font-bold  z-50  m-5 animate2  '>
+                  <span className='flex-center gap-10 spantext2 mt-27'>
                     <div >
                       {Servicestools.map((Htext) => (
                         <div key={Htext.text}>
@@ -228,10 +229,10 @@ const Iconcard = () => {
 
         <div>
           <div className='justify-center items-center techmodel2  '>
-            <div className='text-red-600 text-3xl z-50 font-bold absolute top-180 left-250'>
+            <div className='text-red-600 text-3xl z-50 font-bold absolute top-240 left-250'>
               <div className='container'>
-                <div className=' responsivetext'>
-                  <Canvas camera={{ position: [1, 1, 50], fov: 100 }}>
+                {/* <div className=' responsivetext absolute top-200 right-40 '>
+                  <Canvas camera={{ position: [1, 100, 50], fov: 100 }}>
 
                     <Suspense >
                       <ambientLight intensity={0.3} />
@@ -239,7 +240,7 @@ const Iconcard = () => {
                         <orthographicCamera attach="shadow-camera" args={[-10, 10, 10, -10]} />
                       </directionalLight>
                       <Stage environment="city" intensity={0.6} >
-                        {/* <Laptop/> */}
+                        <Keys/>
                       </Stage>
                       <OrbitControls />
                       <Preload all />
@@ -247,14 +248,14 @@ const Iconcard = () => {
 
 
                   </Canvas>
-                </div>
+                </div> */}
                 <h1>Languages</h1>
-                <div className=' text-4xl font-bold  z-50  m-5 animate  '>  
-                  <span className='flex-center gap-10 spantext mt-27'>
+                <div className=' text-2xl font-bold  z-50 animate3  '>  
+                  <span className='flex-center spantext3'>
                     <div >
                       {Programmingtools.map((Htext) => (
                         <div key={Htext.text}>
-                          <span className=' flex flex-col mt-5 mintext text-green-600'>{Htext.text}</span>
+                          <span className=' flex flex-col mintext text-white'>{Htext.text}</span>
                         </div>
                       ))}
                     </div>
@@ -264,6 +265,28 @@ const Iconcard = () => {
             </div>
           </div>
         </div>
+
+        {/* <div>
+           <div className=' responsivetext absolute top-375 right-190 '>
+                  <Canvas camera={{ position: [0, 290, 70], fov: 120 }}>
+
+                    <Suspense >
+                      <ambientLight intensity={3.3} />
+                      <directionalLight color={'blue'} intensity={10} castShadow position={[2.5, 8, 5]} shadow-mapSize={[1024, 1024]} >
+                        <orthographicCamera attach="shadow-camera" args={[-10, 10, 10, -10]} />
+                      </directionalLight>
+                      <Stage environment="city" intensity={4.6} >
+                        <Designs/>
+                      </Stage>
+                      <OrbitControls />
+                      <Preload all />
+                    </Suspense>
+
+
+                  </Canvas>
+                </div>
+        </div> */}
+
 
       </div>
 

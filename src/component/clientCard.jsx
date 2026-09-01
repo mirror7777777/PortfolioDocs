@@ -12,10 +12,9 @@ const ClientCard =()=> {
            {Servicetext.map((item)=>{
             return(
                 <div key={item.label}>
-                    <div className=' rounded-l-2xl border-4 p-3.5 uclientcolor'>
-                    {/* <h2 className="text-3xl font-bold text-gray-800"><CountUp end={item.numbers} duration={3}/>{item.suffix}</h2>
-                    <p className="text-gray-600">{item.label}</p> */}
-                    <h3>{item.label}</h3>
+                    <div className=' uclientcolor'>
+                    <h2 className="text-3xl font-bold text-gray-800"><CountUp end={item.numbers} duration={3}/>{item.suffix}</h2>
+                    <p className="text-gray-800 itemlabel">{item.label}</p>
                     </div>
                 </div>
                 

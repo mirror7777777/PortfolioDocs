@@ -31,8 +31,8 @@ export default function Form() {
     <>
 
       <div className='relative Formcontainer'>
-        <div className='text-2xl  border-4 pointer w-70 h-20 p-12 ml-40  mt-4 mb-13 text-shadow-indigo-500 hfont'>
-          <h2 className='text-black contactfont'>Contact form</h2>
+        <div className='w-70 h-20 text-shadow-indigo-500 hfont p-10'>
+          <h2 className='absolute top-5 left-17'>Contact form</h2>
         </div>
         <form className='form'>
           <label>

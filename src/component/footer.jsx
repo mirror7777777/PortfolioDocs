@@ -2,7 +2,9 @@ import { memo } from 'react';
 import Footerimg from '../assets/images/pattern.jpg';
 import { useState, useEffect } from 'react';
 import Form from './form';
-
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Preload, Stage,  } from '@react-three/drei';
+import { Suspense } from 'react';
 
 function Clientlogic(e) {
     e.preventDefault();
@@ -49,36 +51,28 @@ const Footer = () => {
 
 
     return (
-        <div className='relative h-170 '>
+        <div className='footer-M relative h-530 absolute top-300  '>
 
-            <div className=' ' /> 
+              <div className='footerIMG'>
+
+                    <img src={Footerimg} alt="footerImage" />
+
+             </div>
 
             <div className=''>
 
-                <div className='footerIMG opacity-10'>
-                    <img src={Footerimg} alt="footerImage" />
-
-                </div>
-                <div className='absolut ml-150 text-black text-3xl font-bold z-50 footer-text '>
-                    <h1>Contact us today.</h1>
-                </div>
-
                 {/* left and right containers */}
 
-                <div className='testfo'>
+                <div className='footeR'>
                         {/* left container */}
-                    <div className='absolute top-3.5 left-3.5 footer-containers'>
+                    <div className='footer-containers'>
 
 
 
 
-                        <div className=' w-1/4 h-186  z-15  text-5xl font-bold text-black opacity-27  '>
+                        <div className='  '>
 
-                            <section className='footer-Left mt-40 ml-20'>
-
-                                <div className=''>
-
-                            <ul className='flex flex-col gap-7' id='ulheadersect'>
+                            <ul className='ulheadersect cursor-pointer' id='ulheadersect'>
 
                                 <li><a onClick={Clientlogic} >ABOUT</a></li>
                                 <li><a onClick={Servicelogic}>WORK</a></li>
@@ -88,10 +82,6 @@ const Footer = () => {
                                 <li><a href="">PRIVACY POLICY</a></li>
 
                             </ul>
-                                </div>
-
-                            </section>
-
 
                         </div>
 
@@ -104,11 +94,11 @@ const Footer = () => {
 
                     {/* right container */}
 
-                   <div className='absolute top--20 left-20 footer-container '>
+                    <div className='footer-container'>
 
-                        <section className='footer-Right ml-170 mt-157'>
+                        <section className='footer-Right'>
 
-                            <div className=' absolute top-158 left-170'>
+                            <div>
 
                                 {/* imported form component */}
                                 <Form />
@@ -119,6 +109,19 @@ const Footer = () => {
 
                     </div>
 
+
+                </div>
+                <div>
+                    <footer class="display grid fixed -bottom-0 align-middle justify-center  max-w-full footer footer-center colorbg left-80 example-3"  >
+                       <div class="mix-blend-color-burn display flex flex-row text-1xl paragraph ">
+                            <p >© 2023 George's. All rights reserved.</p>
+                            <p>Follow us on social media: 
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> | 
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a> | 
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            </p>
+                        </div>
+                    </footer>
                 </div>
 
 
@@ -128,4 +131,4 @@ const Footer = () => {
     );
 };
 
-export default Footer;
+export default memo(Footer);
