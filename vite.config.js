@@ -7,6 +7,7 @@ import svgr from "vite-plugin-svgr";
 export default defineConfig({
   plugins: [react(), tailwindcss(), svgr(),],
   assetsInclude: ['**/*.gltf', '**/*.glb', '**/*.hdr', '**/*.mp4', '**/*.mov'],
+  base: "./",
 
 
   // server: {
