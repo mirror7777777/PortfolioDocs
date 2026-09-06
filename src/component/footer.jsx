@@ -112,8 +112,8 @@ const Footer = () => {
 
                 </div>
                 <div>
-                    <footer class="display grid fixed -bottom-0 align-middle justify-center  max-w-full footer footer-center colorbg left-80 example-3"  >
-                       <div class="mix-blend-color-burn display flex flex-row text-1xl paragraph ">
+                    <footer class="display grid fixed -bottom-0 align-middle justify-center  max-w-full footer footer-center colorbg left-80 "  >
+                       <div class=" display flex flex-row text-1xl paragraph ">
                             <p >© 2023 George's. All rights reserved.</p>
                             <p>Follow us on social media: 
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> | 
