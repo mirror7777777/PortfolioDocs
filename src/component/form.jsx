@@ -14,7 +14,7 @@ export default function Form() {
   const getdata = async (e) => {
     e.preventDefault();
     console.log(form);
-    const res = await fetch('http://localhost:9380/api/form', {
+    const res = await fetch('https://portfolio-sever-five.vercel.app/api/form:3874', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
